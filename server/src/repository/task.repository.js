@@ -10,7 +10,9 @@ async function getTaskByIdDb(_id) {
 
 async function createTaskDb(task) {
     await Table.create(task);
-    return await Table.find();
+    const data = await Table.find();
+    return data;
+    
 }
 
 async function updataTaskDb(_id, task) {
@@ -20,7 +22,10 @@ async function updataTaskDb(_id, task) {
 }
 
 async function deleteTaskByIdDb(_id) {
-    return await Table.deleteOne({ _id: new ObjectId(_id) });
+    await Table.deleteOne({ _id: new ObjectId(_id) });
+    
+    const data = await Table.find();
+    return data;
 }
 
 module.exports = { getAllTaskDb, getTaskByIdDb, createTaskDb, updataTaskDb, deleteTaskByIdDb };

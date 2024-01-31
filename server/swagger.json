@@ -1,0 +1,189 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Task API",
+    "version": "1.0.0",
+    "description": "crud task"
+  },
+  "paths": {
+    "/task": {
+      "get": {
+        "tags": ["Task"],
+        "summary": "Получаем все по запросу",
+        "description": "Жми на кнопку для получения",
+        "responses": {
+          "200": {
+            "description": "Успешный ответ имеет вид:",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "_id": "659c376b7da83b49e5624bce",
+                    "title": "test",
+                    "description": "test",
+                    "__v": 0
+                  }
+                ]
+              }
+            }
+          },
+          "404": {}
+        }
+      },
+      "post": {
+        "tags": ["Task"],
+        "summary": "Получаем все по запросу",
+        "description": "Жми на кнопку для получения",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Успешный ответ имеет вид:",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "_id": "659c376b7da83b49e5624bce",
+                    "title": "test",
+                    "description": "test",
+                    "__v": 0
+                  }
+                ]
+              }
+            }
+          },
+          "404": {}
+        }
+      }
+    },
+    "/task/{_id}": {
+      "get": {
+        "tags": ["Task"],
+        "summary": "Получаем все по запросу",
+        "description": "Жми на кнопку для получения",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Успешный ответ имеет вид:",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "_id": "659c376b7da83b49e5624bce",
+                    "title": "test",
+                    "description": "test",
+                    "__v": 0
+                  }
+                ]
+              }
+            }
+          },
+          "404": {}
+        }
+      },
+      "put": {
+        "tags": ["Task"],
+        "summary": "Обновление пользователя",
+        "description": "Обновление пользователя по _id",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "description": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Успешный ответ имеет вид:",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "_id": "6596d9fec17c3693ff760ae7",
+                    "title": "test@gmail.com",
+                    "description": "12345678",
+                    "__v": 0
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Task"],
+        "summary": "Получаем все по запросу",
+        "description": "Жми на кнопку для получения",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Успешный ответ имеет вид:",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "_id": "659c376b7da83b49e5624bce",
+                    "title": "test",
+                    "description": "test",
+                    "__v": 0
+                  }
+                ]
+              }
+            }
+          },
+          "404": {}
+        }
+      }
+    }
+  
+  }
+}
