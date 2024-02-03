@@ -1,0 +1,52 @@
+$purple_color: #6c63ff;
+$white_color: #fff;
+$white_light_color: #c3c1e5;
+
+@mixin flex($fd, $ai, $gap) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  gap: $gap;
+}
+
+.wrapper {
+  @include flex(column, center, 0);
+  width: 750px;
+  margin: auto;
+
+  h1 {
+    color: #252525;
+  }
+
+  .header {
+    @include flex(row, row, 15px);
+    input {
+      border: 1px solid $purple_color;
+      border-radius: 5px;
+      padding: 10px 15px;
+      display: block;
+      outline: none;
+
+      &:nth-child(1) {
+        width: 246px;
+      }
+
+      &:nth-child(2) {
+        width: 389px;
+      }
+
+      &::placeholder {
+        color: $white_light_color;
+      }
+    }
+    button {
+      border: 1px solid $purple_color;
+      border-radius: 5px;
+      padding: 10px 15px;
+      display: block;
+      background-color: $purple_color;
+      color: $white_color;
+      cursor: pointer;
+    }
+  }
+}
