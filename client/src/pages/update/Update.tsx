@@ -1,6 +1,6 @@
-import style from "./style.module.scss";
+import style from "./update.module.scss";
 
-function Main() {
+function Update() {
   return (
     <>
       <div className={style.wrapper}>
@@ -14,8 +14,9 @@ function Main() {
           </div>
         </div>
       </div>
+<div className={style.img}></div>
     </>
   );
 }
 
-export default Main;
+export default Update;

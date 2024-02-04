@@ -49,4 +49,20 @@ $white_light_color: #c3c1e5;
       cursor: pointer;
     }
   }
+  .inpTask{
+  
+    .form{
+      @include flex(0, center, 0);
+      .imgPencil{
+        width: 18px;
+        height: 18px;
+        background-image: url('./assets/Frame\ 6.svg');
+      }
+      .imgBasket{
+        width: 18px;
+        height: 18px;
+        background-image: url('./assets/trash-svgrepo-com\ 1.svg');
+      }
+    }
+  }
 }
