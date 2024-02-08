@@ -23,6 +23,8 @@ $purple_ligth_color: #C3C1E5;
     width: 18px;
     height: 18px;
     object-fit: contain;
+    border: none;
+    background-color: white;
 }
 
 .wrapper {
@@ -67,9 +69,7 @@ $purple_ligth_color: #C3C1E5;
         }
     }
 
-    .inpTask1,
-    .inpTask2,
-    .inpTask3 {
+    .inpTask {
         display: flex;
         justify-content: space-between;
         gap: 50px;
@@ -83,11 +83,13 @@ $purple_ligth_color: #C3C1E5;
         h2 {
             font: 500 20px 'Kanit';
             color: black;
+            width: 200px;
         }
 
         p {
             font: 500 20px 'Kanit';
-            color: #C3C1E5
+            color: #C3C1E5;
+            width: 300px;
         }
 
         .imgMain {
@@ -95,13 +97,13 @@ $purple_ligth_color: #C3C1E5;
             gap: 10px;
 
             .imgPencil {
-                @include image-block(url(./assets/Frame\ 6.svg));
+                @include image-block(url(./assets/Frame6.svg));
             }
 
             .imgBasket {
-                @include image-block(url(./assets/trash-svgrepo-com\ 1.svg));
-            }
-        }
+                @include image-block(url(./assets/trash-svgrepo-com1.svg));
+            }                        
+        }    
     }
 
     .line {
